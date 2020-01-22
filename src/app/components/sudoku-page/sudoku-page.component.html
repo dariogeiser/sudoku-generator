@@ -1,0 +1,6 @@
+<button (click)="buildSudoku()" class="button">generate new Sudoku</button>
+<div class="line" [ngClass]="{'buttomBorder': (i + 1) % 3 === 0}"  *ngFor="let line of allLines; let i = index">
+  <div class="field" [ngClass]="{'rigthBorder': (i + 1) % 3 === 0}" *ngFor="let number of line.numbers;  let i = index">
+      <span>{{number}}</span>
+  </div>
+</div>
